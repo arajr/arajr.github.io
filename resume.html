@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anoop Raj Nair — Detailed Resume</title>
+<meta name="description" content="Full career history of Anoop Raj Nair — Principal Software Engineer VP at Wellington Management. 25 years in investment technology, asset management, and capital markets.">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:        #ffffff;
+  --bg2:       #f9f9f8;
+  --bg3:       #f3f2ef;
+  --border:    #e5e5e3;
+  --border2:   #d0cfcc;
+  --text:      #1a1a1a;
+  --text2:     #4a4a48;
+  --text3:     #8a8a86;
+  --navy:      #1B3A5C;
+  --tag-bg:    #f0efec;
+  --tag-text:  #4a4a48;
+  --font:      -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --max:       900px;
+  --radius:    6px;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: var(--font); font-size: 16px;
+  line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--text2); }
+
+/* ── NAV ──────────────────────────────────────────────────── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-name { font-size: 14px; font-weight: 600; color: var(--text); text-decoration: none; }
+.nav-links { display: flex; gap: 1.75rem; align-items: center; }
+.nav-links a { font-size: 13px; color: var(--text2); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--text); }
+.nav-back { font-size: 13px; color: var(--text3); text-decoration: none; display: flex; align-items: center; gap: 5px; }
+.nav-back:hover { color: var(--text2); }
+
+/* ── LAYOUT ──────────────────────────────────────────────── */
+.container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
+section { padding: 4rem 0; border-bottom: 1px solid var(--border); }
+section:last-of-type { border-bottom: none; }
+
+/* ── PAGE HEADER ─────────────────────────────────────────── */
+#page-header { padding: 3.5rem 0 3rem; border-bottom: 1px solid var(--border); }
+.ph-inner { display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start; }
+.ph-eyebrow { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text3); margin-bottom: 0.75rem; }
+.ph-name { font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 600; color: var(--text); letter-spacing: -0.02em; margin-bottom: 0.4rem; }
+.ph-title { font-size: 15px; color: var(--text2); margin-bottom: 1.5rem; }
+.ph-summary { font-size: 14px; color: var(--text2); line-height: 1.8; max-width: 580px; margin-bottom: 1.5rem; }
+.ph-meta { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.ph-meta-item { font-size: 13px; color: var(--text3); }
+.ph-meta-item a { color: var(--text2); text-decoration: none; }
+.ph-meta-item a:hover { text-decoration: underline; }
+.ph-photo { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; object-position: center top; border: 1px solid var(--border); display: block; }
+
+/* ── SECTION HEADINGS ────────────────────────────────────── */
+.sec-h2 { font-size: 1.25rem; font-weight: 600; color: var(--text); margin-bottom: 2rem; padding-bottom: 0.875rem; border-bottom: 1px solid var(--border); }
+
+/* ── COMPETENCIES GRID ───────────────────────────────────── */
+.comp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.comp-group-title { font-size: 11px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text3); margin-bottom: 0.75rem; }
+.comp-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.comp-tag { font-size: 12px; padding: 3px 9px; border-radius: 3px; background: var(--tag-bg); color: var(--tag-text); border: 1px solid var(--border); }
+
+/* ── SKILLS TABLE ────────────────────────────────────────── */
+.skills-table { width: 100%; border-collapse: collapse; }
+.skills-table tr { border-bottom: 1px solid var(--border); }
+.skills-table tr:last-child { border-bottom: none; }
+.skills-table td { padding: 0.6rem 0; font-size: 13px; vertical-align: top; }
+.skills-table td:first-child { font-weight: 600; color: var(--text3); width: 160px; padding-right: 1.5rem; white-space: nowrap; }
+.skills-table td:last-child { color: var(--text2); }
+
+/* ── EMPLOYER BLOCK ──────────────────────────────────────── */
+.employer-block { margin-bottom: 3.5rem; }
+.employer-block:last-child { margin-bottom: 0; }
+.emp-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 4px; }
+.emp-name { font-size: 17px; font-weight: 600; color: var(--text); }
+.emp-dates { font-size: 12px; color: var(--text3); white-space: nowrap; }
+.emp-title { font-size: 13px; color: var(--text3); font-style: italic; margin-bottom: 0.25rem; }
+.emp-location { font-size: 12px; color: var(--text3); margin-bottom: 1.5rem; }
+
+/* ── PROJECT ENTRY ───────────────────────────────────────── */
+.project-entry { padding: 1.5rem 0; border-top: 1px solid var(--border); }
+.proj-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3px; }
+.proj-name { font-size: 15px; font-weight: 600; color: var(--text); }
+.proj-dates { font-size: 12px; color: var(--text3); white-space: nowrap; }
+.proj-desk { font-size: 12px; color: var(--text3); font-style: italic; margin-bottom: 0.75rem; }
+.proj-tech { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 0.85rem; }
+.proj-tech span { font-size: 11px; padding: 2px 8px; border-radius: 3px; background: var(--tag-bg); color: var(--tag-text); border: 1px solid var(--border); }
+.cat-label { font-size: 11px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--navy); margin: 0.85rem 0 0.4rem; }
+.proj-bullets { list-style: none; margin-bottom: 0.5rem; }
+.proj-bullets li { font-size: 14px; color: var(--text2); padding: 3px 0 3px 1.25rem; position: relative; line-height: 1.65; }
+.proj-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--text3); font-size: 12px; top: 5px; }
+.proj-note { font-size: 12px; color: var(--text3); font-style: italic; border-left: 2px solid var(--border2); padding-left: 10px; margin-top: 0.75rem; }
+
+/* ── PHASE BLOCK ─────────────────────────────────────────── */
+.phase-block { margin-top: 1rem; padding-top: 0.75rem; border-top: 1px dashed var(--border); }
+.phase-label { font-size: 13px; font-weight: 600; color: var(--text2); margin-bottom: 0.5rem; padding-left: 10px; border-left: 2px solid var(--border2); }
+
+/* ── CONSULTING SECTION ──────────────────────────────────── */
+.consulting-block { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-top: 2rem; }
+.consulting-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 1rem; }
+
+/* ── EDUCATION ───────────────────────────────────────────── */
+.edu-grid { display: flex; flex-direction: column; }
+.edu-item { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: baseline; padding: 1rem 0; border-bottom: 1px solid var(--border); }
+.edu-item:first-child { border-top: 1px solid var(--border); }
+.edu-school { font-size: 14px; font-weight: 600; color: var(--text); }
+.edu-note { font-size: 12px; color: var(--text3); margin-top: 2px; }
+.edu-deg { font-size: 13px; color: var(--text2); white-space: nowrap; }
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+footer { padding: 2rem; text-align: center; font-size: 12px; color: var(--text3); border-top: 1px solid var(--border); }
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 760px) {
+  nav { padding: 0 1rem; }
+  .nav-links { gap: 1rem; }
+  .container { padding: 0 1.25rem; }
+  section { padding: 2.5rem 0; }
+  .ph-inner { grid-template-columns: 1fr; }
+  .ph-photo { display: none; }
+  .comp-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .emp-header { flex-direction: column; gap: 2px; }
+  .proj-header { flex-direction: column; gap: 2px; }
+  .edu-item { grid-template-columns: 1fr; gap: 2px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-name">← Anoop Raj Nair</a>
+  <div class="nav-links">
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ═══ PAGE HEADER ══════════════════════════════════════════ -->
+<section id="page-header">
+  <div class="container">
+    <div class="ph-inner">
+      <div>
+        <p class="ph-eyebrow">Full Career History</p>
+        <h1 class="ph-name">Anoop Raj Nair</h1>
+        <p class="ph-title">Principal Software Engineer, Vice President · Wellington Management · Boston, MA</p>
+        <p class="ph-summary">Investment technology leader with 25+ years architecting and delivering mission-critical platforms across asset management, energy trading, and capital markets. At Wellington Management for nearly two decades — first as an embedded Sapient consultant (2006–2013), then as a full-time Principal Engineer. Builder of firm-wide systems spanning portfolio analytics, structured products, ESG computation, real-time data infrastructure, and next-generation investment platforms.</p>
+        <div class="ph-meta">
+          <span class="ph-meta-item"><a href="https://anooprajnair.com">anooprajnair.com</a></span>
+          <span class="ph-meta-item"><a href="mailto:anoop.raj@gmail.com">anoop.raj@gmail.com</a></span>
+          <span class="ph-meta-item"><a href="https://www.linkedin.com/in/anooprajnair/" target="_blank" rel="noopener">LinkedIn</a></span>
+          <span class="ph-meta-item">Wayland, MA</span>
+        </div>
+      </div>
+      <div>
+        <img class="ph-photo" src="data:image/jpeg;base64,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" alt="Anoop Raj Nair">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMPETENCIES ═════════════════════════════════════════ -->
+<section id="competencies">
+  <div class="container">
+    <h2 class="sec-h2">Core Competencies</h2>
+    <div class="comp-grid">
+      <div>
+        <div class="comp-group-title">Investment Technology</div>
+        <div class="comp-tags">
+          <span class="comp-tag">Portfolio Analytics & Attribution</span>
+          <span class="comp-tag">Fixed Income & Structured Products</span>
+          <span class="comp-tag">Real-Time Data Systems</span>
+          <span class="comp-tag">ESG Analytics</span>
+          <span class="comp-tag">Cross-Asset Platforms</span>
+        </div>
+      </div>
+      <div>
+        <div class="comp-group-title">Engineering & Architecture</div>
+        <div class="comp-tags">
+          <span class="comp-tag">Microservice Architecture</span>
+          <span class="comp-tag">AWS / Cloud Infrastructure</span>
+          <span class="comp-tag">Big Data & Data Engineering</span>
+          <span class="comp-tag">GraphQL & API Design</span>
+          <span class="comp-tag">AI-Assisted Engineering</span>
+        </div>
+      </div>
+      <div>
+        <div class="comp-group-title">Leadership & Delivery</div>
+        <div class="comp-tags">
+          <span class="comp-tag">Team Leadership & Offshore Delivery</span>
+          <span class="comp-tag">Stakeholder & Client Management</span>
+          <span class="comp-tag">Contract & Budget Management</span>
+          <span class="comp-tag">Fixed-Time / Fixed-Budget Delivery</span>
+          <span class="comp-tag">Regulatory Compliance Programs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TECHNICAL SKILLS ══════════════════════════════════════ -->
+<section id="skills">
+  <div class="container">
+    <h2 class="sec-h2">Technical Skills</h2>
+    <table class="skills-table">
+      <tr><td>Languages</td><td>Java, SQL/PL-SQL, Perl, JavaScript/TypeScript, Python</td></tr>
+      <tr><td>Cloud & Data</td><td>AWS (EC2, Lambda, S3, Redshift, EMR, Athena), Hadoop HDFS, Apache Spark, Apache Hive, Elastic Search</td></tr>
+      <tr><td>Frameworks</td><td>GraphQL, React JS, Node.js, OpenFin, Socket.io, Redis, Grid Computing</td></tr>
+      <tr><td>Data & Analytics</td><td>Bloomberg B-PIPE, Intex API, Investment View Library, Oracle, TIBCO</td></tr>
+      <tr><td>Tools & Platforms</td><td>Claude Code CLI, IBM Tivoli Maestro, Tableau, Crystal Reports, In3D Visual Insight</td></tr>
+      <tr><td>Databases</td><td>Oracle 9i/11g, Amazon Redshift, DynamoDB, Sybase</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ════════════════════════════════════════════ -->
+<section id="experience">
+  <div class="container">
+    <h2 class="sec-h2">Professional Experience</h2>
+
+    <!-- ─── WELLINGTON FTE ────────────────────────────────── -->
+    <div class="employer-block">
+      <div class="emp-header">
+        <span class="emp-name">Wellington Management Company LLP</span>
+        <span class="emp-dates">January 2013 – Present</span>
+      </div>
+      <div class="emp-title">Principal Software Engineer, Vice President · Boston, MA</div>
+      <div class="emp-location">Joined as Lead Software Engineer, AVP · Promoted to Principal Software Engineer, Vice President</div>
+
+      <!-- IV Library -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">Investment View Library — AI-Assisted Architectural Redesign</span>
+          <span class="proj-dates">2026 – Present</span>
+        </div>
+        <div class="proj-desk">Core Investment Technology · Firm-Wide</div>
+        <div class="proj-tech"><span>Java</span><span>Claude Code CLI</span><span>AWS</span></div>
+        <ul class="proj-bullets">
+          <li>Leading the architectural redesign of the Investment View library — Wellington's core portfolio analytics engine underpinning virtually all investment platforms — using Claude Code CLI (Anthropic's agentic coding tool) to accelerate the rewrite at scale</li>
+          <li>Redesigning for both end-of-day batch processing and high-throughput, tick-driven real-time demands; establishing an early institutional pattern for AI-assisted engineering on production-grade financial systems at Wellington</li>
+          <li>The Investment View library sits at the foundation of Wellington's technology stack — its redesign directly impacts the performance, reliability, and evolution of firm-wide portfolio analytics</li>
+        </ul>
+      </div>
+
+      <!-- Alpine -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">Alpine Data Engine — Real-Time Investment Analytics Platform</span>
+          <span class="proj-dates">2023 – Present</span>
+        </div>
+        <div class="proj-desk">Hedge Fund / Alternatives Desk</div>
+        <div class="proj-tech"><span>Java</span><span>AWS</span><span>Bloomberg B-PIPE</span><span>GraphQL / PRISM</span><span>Investment View Library</span><span>Real-Time Streaming</span></div>
+        <div class="cat-label">Technical Architecture</div>
+        <ul class="proj-bullets">
+          <li>Architected the Alpine Data Engine — real-time data and computation layer powering Wellington's first hedge fund investment analytics platform, delivering live ticking positions, Bloomberg B-PIPE pricing, intraday P&L, and portfolio and risk analytics in a single platform</li>
+          <li>Designed the end-to-end real-time pipeline: live position ingestion from upstream producers → Bloomberg B-PIPE price feed → P&L via valuation engine → portfolio analytics via upgraded Investment View library → risk engine integration</li>
+          <li>Led a significant upgrade of the Investment View library to support continuous tick-driven computation — extending a historically batch-oriented engine to hedge fund scale and throughput</li>
+          <li>Integrated with Wellington's proprietary XML-defined aggregation engine to roll up position-level analytics into configurable buckets in real time; exposed all output through the PRISM GraphQL layer with role-based authentication</li>
+          <li>Established a reusable real-time data architecture pattern — live feed ingestion, analytics computation, aggregation, and PRISM exposure — applicable to future real-time use cases across asset classes</li>
+        </ul>
+        <div class="cat-label">Team Leadership</div>
+        <ul class="proj-bullets">
+          <li>Leading a team of 4 engineers — responsible for technical direction, architecture decisions, delivery planning, sprint execution, and stakeholder alignment with the Hedge Fund desk and platform teams</li>
+        </ul>
+      </div>
+
+      <!-- ESG -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">ESG Analytics Microservice</span>
+          <span class="proj-dates">2021 – 2022</span>
+        </div>
+        <div class="proj-desk">Firm-Wide · ESG / Sustainable Investing</div>
+        <div class="proj-tech"><span>Java</span><span>AWS</span><span>Microservices</span><span>GraphQL / PRISM</span></div>
+        <ul class="proj-bullets">
+          <li>Wellington Management was a founding signatory of the Net Zero Asset Managers initiative, creating an urgent firm-wide requirement to compute ESG analytics at portfolio position level across all investment tools</li>
+          <li>Identified firm-wide duplication risk as multiple teams independently implemented ESG calculations; designed a centralized ESG Analytics microservice as the single authoritative computation layer consumed by all investment tools</li>
+          <li>Consolidated complex, rapidly-evolving ESG calculation logic into one governed service, ensuring consistent and auditable analytics across all portfolios; worked across each consuming team to drive integration, testing, and cutover</li>
+          <li>Scaled the platform to handle firm-wide portfolio-level computation volume; positioned Wellington to meet Net Zero reporting commitments with a single, auditable ESG calculation source</li>
+        </ul>
+      </div>
+
+      <!-- PRISM -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">PRISM — Firm-Wide GraphQL Data Layer</span>
+          <span class="proj-dates">2021</span>
+        </div>
+        <div class="proj-desk">Firm-Wide Investment Technology Platform</div>
+        <div class="proj-tech"><span>Java</span><span>GraphQL</span><span>AWS</span><span>Investment View Library</span></div>
+        <ul class="proj-bullets">
+          <li>Led the exposure of Wellington's Portfolio Position, Analytics, and Aggregation data through PRISM — the firm's GraphQL data layer aggregating all data producers, internal databases, and microservices into a single canonical, versioned API surface</li>
+          <li>Integrated with the Investment View library to expose end-of-day holdings, pricing, and computed portfolio analytics; designed data contracts, schema definitions, and access patterns for consumers across the firm</li>
+          <li>Replaced fragmented point-to-point integrations between consuming applications and backend systems, establishing a reusable, governed data access layer for portfolio analytics firm-wide</li>
+        </ul>
+      </div>
+
+      <!-- Mosaic -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">Mosaic — Next-Generation Investment Technology Platform</span>
+          <span class="proj-dates">2019 – 2020</span>
+        </div>
+        <div class="proj-desk">Firm-Wide · Fixed Income · Cross-Asset</div>
+        <div class="proj-tech"><span>OpenFin</span><span>React JS</span><span>TypeScript</span><span>Node.js</span><span>AWS EC2</span><span>Elastic Search</span><span>AWS Lambda</span><span>S3</span><span>Socket.io</span><span>Redis</span></div>
+        <ul class="proj-bullets">
+          <li>Led the engineering build-out of Mosaic — Wellington's firm-wide OpenFin-based investment desktop platform on a microservices architecture; worked with consulting partners to establish Mosaic architecture standards and standardize UI design language and component library across the firm</li>
+          <li>Led migration of Investor LaunchPad products (six Fixed Income desks) into the unified Mosaic Research Platform; built the Open Search infrastructure on Elastic Search, enabling firm-wide research discovery across securities, analysts, and asset classes for the first time</li>
+          <li>Managed a multi-geography engineering team following Agile principles; drove decommissioning of legacy applications in close cooperation with business teams, reducing technical debt while maintaining continuity for active users</li>
+          <li>Established the OpenFin-based Mosaic platform as Wellington's standard investment application framework, forming the foundation for all subsequent cross-asset technology investment</li>
+        </ul>
+      </div>
+
+      <!-- ARIA -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">ARIA — Analyst Research Impact and Accuracy</span>
+          <span class="proj-dates">2017 – 2018</span>
+        </div>
+        <div class="proj-desk">Investment Grade · High Yield Fixed Income</div>
+        <div class="proj-tech"><span>AWS Redshift</span><span>Amazon EMR</span><span>Hadoop HDFS</span><span>Apache Spark</span><span>Apache Hive</span><span>Amazon Athena</span><span>IBM Tivoli Maestro</span><span>Tableau</span></div>
+        <div class="cat-label">Platform & Quantitative Framework</div>
+        <ul class="proj-bullets">
+          <li>Architected and delivered ARIA — a specialized performance attribution platform to quantify the research skill of Fixed Income credit analysts across IG and HY desks; no industry-standard solution existed for this problem at the time</li>
+          <li>Partnered directly with Wellington's Chief Fixed Income Strategist to translate complex quantitative evaluation models (DTS-based exposure normalization, RUDTS accuracy scoring, benchmark-relative alignment) into concrete, implementable engineering specifications</li>
+          <li>Implemented attribution engine decomposing portfolio alpha into aligned, misaligned, and uncovered contributions across analysts, sectors, and time periods; built linked multi-period attribution with market-value weighted aggregation and smoothing across hundreds of accounts</li>
+        </ul>
+        <div class="cat-label">Data Engineering</div>
+        <ul class="proj-bullets">
+          <li>Designed a large-scale data pipeline on AWS and Hadoop sourcing from six internal systems: Amazon Redshift (holdings, security analytics), IVPS (performance), RED (research), EXR (account/benchmark analytics), and IDR (reference data)</li>
+          <li>Orchestrated daily batch via IBM Tivoli Maestro; built EMR/HDFS assimilation layer with Spark/Hive computation; surfaced results in Amazon Athena and Tableau for senior management and analyst reporting</li>
+          <li>Replaced manual spreadsheet-based analyst evaluation with a systematic, daily, firm-wide attribution system — enabling Fixed Income Senior Management to objectively measure credit analyst skill across recommendation categories (TOP, OUT, MKT) for the first time at Wellington</li>
+        </ul>
+      </div>
+
+      <!-- ILP -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">Investor LaunchPad (ILP) — Fixed Income Expansion</span>
+          <span class="proj-dates">2016</span>
+        </div>
+        <div class="proj-desk">Investment Grade · High Yield · EM Corporate · EM Sovereign · Municipal · Insurance / Bank Loans</div>
+        <div class="proj-tech"><span>React JS</span><span>Node.js</span><span>AWS</span><span>Elastic Search</span></div>
+        <ul class="proj-bullets">
+          <li>Tasked with extending Investor LaunchPad — Wellington's existing firm-wide research and collaboration platform, originally built for the Equity franchise — to cover the full Fixed Income universe, serving ~1,000 active users firm-wide</li>
+          <li>Onboarded six Fixed Income desks onto the platform: Investment Grade, High Yield, Emerging Markets Corporate, Emerging Markets Sovereign, Municipal, and Insurance / Bank Loans</li>
+          <li>Designed Fixed Income-specific data models and integrations for securities, analytics, and research workflows — extending the existing Equity architecture without disrupting existing users; made Wellington's internal Fixed Income research accessible and searchable to all investors for the first time</li>
+        </ul>
+      </div>
+
+      <!-- Target Capture -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">Target Capture Platform</span>
+          <span class="proj-dates">2014 – 2015</span>
+        </div>
+        <div class="proj-desk">US Multi-Strategy · Emerging Market Debt · Global Bond</div>
+        <div class="proj-tech"><span>Java</span><span>Oracle</span><span>SQL/PL-SQL</span></div>
+        <ul class="proj-bullets">
+          <li>Architected and owned Target Capture — replacing manual spreadsheet-based PM workflows with a centralized platform enabling Portfolio Managers to define and manage active weight targets across sectors and securities in multiple sizing terms: MV%, CTD, CTSD, CTDTS, and CTIActiveRisk</li>
+          <li>Deployed across three desks managing ~$1B in notional; built integrated trade generation, performance attribution, and risk analytics; connected to downstream compliance and portfolio management systems for daily automated rebalancing</li>
+          <li>Eliminated manual target spreadsheets across PM teams — delivering a systematic, auditable target management system at scale across strategies, portfolio types, and constituents</li>
+        </ul>
+      </div>
+
+      <!-- Rapid Solutions -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">Rapid Solutions Team — Fixed Income Portal & Bank Loan Workflow</span>
+          <span class="proj-dates">2013</span>
+        </div>
+        <div class="proj-desk">Currency · Bank Loans · Multi-Boutique Fixed Income</div>
+        <div class="proj-tech"><span>Java</span><span>Oracle</span><span>SQL</span><span>Web Portal</span></div>
+        <ul class="proj-bullets">
+          <li>Led a combined team of engineers and business analysts on Wellington's Rapid Solutions team — purpose-built to deliver investor tools outside traditional development cycles, with direct PM/PA access and weekly production releases</li>
+          <li>Designed and delivered Bank Loan legal document workflow system — replacing manual tracking and reducing operational risk around document custody and deadlines</li>
+          <li>Delivered Currency Order Workstation, TBA Roll System, Asset In-Kind Transfer System, Credit Research System, and multiple data feeds — all through a central role-based web portal</li>
+        </ul>
+      </div>
+    </div><!-- end Wellington FTE -->
+
+    <!-- ─── SAPIENT AT WELLINGTON ─────────────────────────── -->
+    <div class="employer-block">
+      <div class="emp-header">
+        <span class="emp-name">Sapient Corporation · Client: Wellington Management</span>
+        <span class="emp-dates">2006 – January 2013</span>
+      </div>
+      <div class="emp-title">Embedded Technology Consultant · Boston, MA</div>
+      <div class="emp-location">Seven-year embedded engagement; joined Wellington as full-time employee in January 2013</div>
+
+      <!-- Structured Products -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">Structured Products Platform & Federal Reserve Mandate Technology</span>
+          <span class="proj-dates">2008 – 2012</span>
+        </div>
+        <div class="proj-desk">Structured Products — RMBS · CMBS · ABS · CLO</div>
+        <div class="proj-tech"><span>Oracle</span><span>SQL/PL-SQL</span><span>Perl</span><span>Grid Computing</span><span>Intex API</span></div>
+        <ul class="proj-bullets">
+          <li>Wellington Management was selected to manage a large Federal Reserve mandate following the 2008 housing market crash; embedded directly with the Structured Products desk to design and deliver production technology across RMBS, CMBS, ABS, and CLO asset classes under significant time and regulatory pressure</li>
+          <li>Designed and built the Structured Products Datamart sourcing large-scale datasets from Intex; architected the Structured Product Analyzer (SPA) — a real-time cashflow scenario analysis tool integrating with Intex Solver API and Grid Computing for near-real-time results at scale</li>
+          <li>Built a dedicated Fed data feed and regulatory reporting tool meeting stringent data quality, format, and audit standards required under the mandate; coordinated with compliance and operations for timely, audit-ready submissions</li>
+        </ul>
+      </div>
+
+      <!-- ISW -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">Investment Strategy Workbench (ISW)</span>
+          <span class="proj-dates">2006 – 2007</span>
+        </div>
+        <div class="proj-desk">Global Bond Desk</div>
+        <div class="proj-tech"><span>Java</span><span>Oracle</span><span>SQL/PL-SQL</span></div>
+        <ul class="proj-bullets">
+          <li>Architected and owned ISW — a performance attribution platform for Wellington's Global Bond desk measuring contribution to return for abstract investment strategies across international sovereign bond markets, including German Bunds and UK Gilts</li>
+          <li>Bridged the gap between theoretical strategy construction and realized P&L, giving PMs a systematic daily view of how yield curve ideas translated into performance across market-value and CTD-sized positions</li>
+        </ul>
+      </div>
+    </div><!-- end Sapient at Wellington -->
+
+    <!-- ─── SAPIENT CORP ──────────────────────────────────── -->
+    <div class="employer-block">
+      <div class="emp-header">
+        <span class="emp-name">Sapient Corporation</span>
+        <span class="emp-dates">August 2000 – 2006</span>
+      </div>
+      <div class="emp-title">Track Lead · Infrastructure Lead · System Architect · Multiple client locations</div>
+
+      <!-- Cinergy -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">Cinergy Corporation — REAP Risk Engine & Portfolio Optimization Platform</span>
+          <span class="proj-dates">March 2003 – February 2006</span>
+        </div>
+        <div class="proj-desk">Energy Trading · Power · Gas · Coal · Propane · Emissions · Cincinnati OH · Houston TX · Bangalore IN · New Delhi IN</div>
+        <div class="proj-tech"><span>Java</span><span>Oracle 9i</span><span>TIBCO</span><span>In3D Visual Insight</span><span>Crystal Reports</span><span>Grid Computing</span><span>EJB / JMS</span><span>SOAP</span></div>
+
+        <div class="phase-block">
+          <div class="phase-label">Phase 1 — Market Risk · REAP &nbsp;·&nbsp; Track Lead &nbsp;·&nbsp; 2003–2004</div>
+          <div class="cat-label">Technical Architecture</div>
+          <ul class="proj-bullets">
+            <li>Defined the end-to-end technical architecture for the REAP risk platform — foundational design reused across all subsequent phases; architected a data warehouse capturing deal and curve data hourly across a 25-year forward horizon</li>
+            <li>Implemented Monte Carlo simulation-based VaR engine with configurable parameter management; designed 3D analytical risk visualizations using In3D Visual Insight integrated via TIBCO</li>
+          </ul>
+          <div class="cat-label">Client Management</div>
+          <ul class="proj-bullets">
+            <li>Presented 3D visual risk tools directly to the Cinergy Board of Directors in partnership with the company's Chief Risk Manager; contributed to business development that grew a small engagement into a major multi-year Sapient account</li>
+          </ul>
+          <div class="cat-label">Team Building & Delivery</div>
+          <ul class="proj-bullets">
+            <li>Led a team of 15 developers; managed all code and non-code releases, UAT, and production cutover; conducted hiring and team onboarding; managed training and knowledge transition to Cinergy teams</li>
+          </ul>
+        </div>
+
+        <div class="phase-block">
+          <div class="phase-label">Phase 2 — Portfolio Optimization · Power &nbsp;·&nbsp; Track Lead & Infrastructure Lead &nbsp;·&nbsp; 2004</div>
+          <div class="cat-label">Technical Architecture</div>
+          <ul class="proj-bullets">
+            <li>Designed and built a Grid Computing system for nightly batch job scheduling across the optimization platform; worked directly with HP to procure and configure large-capacity servers; diagnosed and resolved a critical server overheating issue by identifying a BIOS firmware upgrade as the root cause</li>
+            <li>Built a centralized SOAP-based valuation service consumed across the Cinergy organization; designed production server and database architecture including memory and storage sizing</li>
+          </ul>
+          <div class="cat-label">Client Management & Delivery</div>
+          <ul class="proj-bullets">
+            <li>Managed 8 senior developers (team of 28 total); prepared and presented project dashboards to client senior leadership and steering committee; managed contract deliverables, change orders, and provided budget guidance to Sapient Finance</li>
+          </ul>
+        </div>
+
+        <div class="phase-block">
+          <div class="phase-label">Phase 3 — Fuels & Multi-Commodity + Offshore Build &nbsp;·&nbsp; Track Lead &nbsp;·&nbsp; 2004–2005</div>
+          <div class="cat-label">Offshore Leadership</div>
+          <ul class="proj-bullets">
+            <li>Founded and built the offshore delivery team in Bangalore — hired, onboarded, and ramped 6 engineers from the ground up; established cross-geography delivery model connecting Bangalore with client operations in Cincinnati and Houston</li>
+          </ul>
+          <div class="cat-label">Technical Architecture & Delivery</div>
+          <ul class="proj-bullets">
+            <li>Extended the optimization and valuation platform to cover Gas, Coal, Propane, and Emissions; defined incremental release plans; instituted long-term production support processes for the end-of-day operations</li>
+          </ul>
+        </div>
+
+        <div class="phase-block">
+          <div class="phase-label">Phase 4 — Regulated / Deregulated Compliance Split &nbsp;·&nbsp; System Architect & Sole Delivery Lead &nbsp;·&nbsp; 2005–2006</div>
+          <div class="cat-label">Technical Architecture</div>
+          <ul class="proj-bullets">
+            <li>Architected the solution to split Cinergy's regulated and deregulated businesses ahead of a hard FERC regulatory deadline; designed data-level and application-level security across 8 systems: CMA, RMA, Risk Portal, Reconciliation, Ad-Hoc Analysis, Crystal Reports, Visual Insights, and Reporting Tree with Active Directory-based access controls</li>
+          </ul>
+          <div class="cat-label">Client Management</div>
+          <ul class="proj-bullets">
+            <li>Sole Delivery Lead committed to completing the program within a fixed-time, fixed-budget constraint — no schedule or cost overrun; regularly attended Cinergy Board of Directors meetings to provide program status updates directly to the Chief Risk Officer</li>
+            <li>Managed full vendor transition — structured handoff of all applications and documentation to the incoming support vendor; worked closely with Cinergy developers and support staff throughout knowledge transfer</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- NYISO -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">NYISO — New York Independent System Operator</span>
+          <span class="proj-dates">March 2002 – February 2003</span>
+        </div>
+        <div class="proj-desk">Open Scheduling System (OSS) — Statewide Power Grid Market Platform · Albany, NY · Travel: Boston–Albany</div>
+        <div class="proj-tech"><span>Java</span><span>OOAD</span><span>Oracle 9i</span><span>PL/SQL</span><span>J2EE</span><span>Weblogic</span><span>XML</span></div>
+        <ul class="proj-bullets">
+          <li>Built core components of OSS — the platform enabling market participants across New York State to schedule power usage and submit price bids through the Day-Ahead Market (DAM) and Hour-Ahead Market (HAM); DAM enabled 24-hour-ahead power scheduling and price bidding, HAM provided real-time short-horizon adjustments</li>
+          <li>Contributed to technical architecture and business system specifications for NYISO — a non-profit operator managing the statewide grid without direct ownership of grid assets; built production Swing modules and supported integration with the PJM grid operator interface</li>
+        </ul>
+        <div class="proj-note">Had code reviewed directly by Grady Booch, co-creator of UML and pioneer of object-oriented design.</div>
+      </div>
+
+      <!-- RBS -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">Royal Bank of Scotland · Foreign Exchange Micro Payments (FXMP)</span>
+          <span class="proj-dates">November 2001 – March 2002</span>
+        </div>
+        <div class="proj-desk">London, UK · On-site assignment</div>
+        <div class="proj-tech"><span>Java</span><span>EJB</span><span>Swing</span><span>Weblogic</span><span>Sybase</span><span>XML</span></div>
+        <ul class="proj-bullets">
+          <li>Designed and developed Swing-based trading screens for FX rate viewing and transaction execution; built and deployed EJB components integrating FXMP with Rates and Blending engines; coordinated GDD testing and demoed screens to client stakeholders</li>
+        </ul>
+      </div>
+
+      <!-- Janus -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">Janus Institutional Investors · Institutional Sales Self-Service Toolbox</span>
+          <span class="proj-dates">March 2001 – November 2001</span>
+        </div>
+        <div class="proj-desk">Intranet Portal · Denver, CO</div>
+        <div class="proj-tech"><span>Xpedio CMS</span><span>Yahoo! Portal Builder</span><span>SiteMinder</span><span>Oracle 8.1</span><span>Java</span><span>iPlanet</span></div>
+        <ul class="proj-bullets">
+          <li>Owned infrastructure across 11 servers and 13 integrated software components; implemented and maintained single sign-on via SiteMinder; served as DBA and central point of contact for all third-party vendors and deployment issues; managed integration with S&P as an external data vendor</li>
+        </ul>
+      </div>
+
+      <!-- PowerShare -->
+      <div class="project-entry">
+        <div class="proj-header">
+          <span class="proj-name">PowerShare Inc · Online Trading & Portfolio Management Platform</span>
+          <span class="proj-dates">August 2000 – February 2001</span>
+        </div>
+        <div class="proj-desk">Trading SaaS · Westboro, MA</div>
+        <div class="proj-tech"><span>Java</span><span>Swing</span><span>EJB</span><span>Weblogic</span><span>TIBCO</span><span>Oracle 8</span></div>
+        <ul class="proj-bullets">
+          <li>Module lead for a Java Swing-based trading SaaS targeting the Indian market; designed and built a configurable rules engine supporting pluggable Order Management and Portfolio Management modules, real-time Reuters ticker feed via TIBCO messaging, and owned all functional and technical aspects of the PS-Tools module</li>
+        </ul>
+        <div class="proj-note">Demoed the platform to an ICICI Bank-backed VC group; presented directly to KV Kamath and Lalita Gupte.</div>
+      </div>
+
+      <!-- Consulting competencies -->
+      <div class="consulting-block">
+        <div class="consulting-title">Consulting & Engagement Management Competencies (Sapient Corporation, 2000–2013)</div>
+        <ul class="proj-bullets">
+          <li>Managed client contracts, change orders, and scope negotiations across multiple engagements; provided revenue forecasting and budget guidance to Sapient Finance teams throughout project lifecycles</li>
+          <li>Operated within and delivered against fixed-time, fixed-budget commercial structures across regulated industries; presented at Board and C-suite level (Cinergy Board of Directors / Chief Risk Officer)</li>
+          <li>Led planning exercises with clients and multi-vendor partner groups; conducted structured requirements-gathering with business stakeholders across financial services and energy trading</li>
+          <li>Built and grew teams from scratch onshore and offshore; conducted numerous hiring interviews; founded the Bangalore offshore delivery team for the Cinergy engagement; mentored and grew junior developers on every engagement</li>
+          <li>Managed complete knowledge transition at engagement close — worked closely with client developers, support staff, and incoming vendors to ensure fully supported handoffs on every program</li>
+        </ul>
+      </div>
+    </div><!-- end Sapient Corp -->
+
+  </div>
+</section>
+
+<!-- ═══ EDUCATION ═════════════════════════════════════════════ -->
+<section id="education">
+  <div class="container">
+    <h2 class="sec-h2">Education</h2>
+    <div class="edu-grid">
+      <div class="edu-item">
+        <div>
+          <div class="edu-school">Wharton School, University of Pennsylvania</div>
+        </div>
+        <div class="edu-deg">Executive CTO Program</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-school">UC Berkeley, School of Information</div>
+          <div class="edu-note">Capstone: Hoops IQ — RAG / LLM / Text-to-SQL WNBA Analytics Platform (LangChain, AWS Athena, DynamoDB, GPT-4o, Claude 3.5 Sonnet)</div>
+        </div>
+        <div class="edu-deg">M.S. Data Science (MIDS)</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-school">Cochin University of Science and Technology</div>
+        </div>
+        <div class="edu-deg">B.S. Computer Science</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>© 2026 Anoop Raj Nair · <a href="https://anooprajnair.com" style="text-decoration:none;color:inherit;">anooprajnair.com</a></footer>
+
+</body>
+</html>
